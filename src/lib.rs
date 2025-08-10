@@ -7,3 +7,4 @@ mod tar_handle;
 
 pub use archive_index::IdxBuilderTarExt;
 pub use tar_directory::TarDirectory;
+pub use tar_directory::TarDirectoryError;
