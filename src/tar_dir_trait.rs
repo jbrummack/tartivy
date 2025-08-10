@@ -36,7 +36,8 @@ impl Directory for TarDirectory {
         path: &std::path::Path,
     ) -> Result<bool, tantivy::directory::error::OpenReadError> {
         let _ = path;
-        todo!()
+        let name = path.to_string_lossy();
+        Ok(self.toc.contains_key(name.as_ref()))
     }
 
     fn open_write(
