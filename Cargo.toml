@@ -9,6 +9,7 @@ stable_deref_trait = "1.2.0"
 tantivy = "0.24.2"
 tar = "0.4.44"
 thiserror = "2.0.12"
+tracing = "0.1.41"
 
 [dev-dependencies]
 tempdir = "0.3.7"

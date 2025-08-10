@@ -38,7 +38,8 @@ impl TarDirectory {
             let name = std::str::from_utf8(&header[..100])?
                 .trim_end_matches('\0')
                 .to_string();
-            //println!("LOADED: {name}");
+
+            tracing::debug!("LOADED SEGMENT: {name}");
             let size = usize::from_str_radix(
                 std::str::from_utf8(&header[124..136])?.trim_end_matches('\0'),
                 8,
